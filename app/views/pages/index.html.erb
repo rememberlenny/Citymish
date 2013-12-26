@@ -1,7 +1,7 @@
 <% if signed_in? %>
 
   <div class="row">
-    <aside class="large-4">
+    <aside class="large-4 column">
       <section>
         <%= render 'shared/user_info' %>
       </section>
@@ -9,6 +9,10 @@
         <%= render 'shared/mission_form' %>
       </section>
     </aside>
+    <div class="large-8 column">
+      <h3>Mission Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
   </div>
 
 <% else %>

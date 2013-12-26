@@ -30,4 +30,15 @@ describe "Mission pages" do
       end
     end
   end
+  describe "mission destruction" do
+    before { FactoryGirl.create(:mission, user: user) }
+
+    describe "as correct user" do
+      before { visit root_path }
+
+      it "should delete a mission" do
+        expect { click_link "delete" }.to change(Mission, :count).by(-1)
+      end
+    end
+  end
 end

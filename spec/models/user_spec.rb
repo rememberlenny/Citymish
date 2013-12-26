@@ -16,6 +16,7 @@ describe User do
   it { should respond_to(:authenticate) }
   it { should respond_to(:admin) }
   it { should respond_to(:missions) }
+  it { should respond_to(:feed) }
 
   it { should be_valid }
   it { should_not be_admin }
@@ -92,6 +93,15 @@ describe User do
       missions.each do |mission|
         expect(mission.where(id: mission.id)).to be_empty
       end
+    end
+    describe "status" do
+      let(:unfollowed_post) do
+        FactoryGirl.create(:mission, user: FactoryGirl.create(:user))
+      end
+
+      its(:feed) { should include(newer_mission) }
+      its(:feed) { should include(older_mission) }
+      its(:feed) { should_not include(unfollowed_post) }
     end
   end
 end
