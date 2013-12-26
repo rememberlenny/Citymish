@@ -1,6 +1,17 @@
 <% provide(:title, @user.name) %>
 
 <div class="row">
-  <%= gravatar_for @user %>
-  <h1><%= @user.name %></h1>
+  <div class="large-4 column">
+    <%= gravatar_for @user %>
+    <h1><%= @user.name %></h1>
+  </div>
+  <div class="large-8 column">
+    <% if @user.missions.any? %>
+      <h3>Missions (<%= @user.missions.count %>)</h3>
+      <ol class="missions">
+        <%= render @missions %>
+      </ol>
+      <%= will_paginate @missions %>
+    <% end %>
+  </div>
 </div>

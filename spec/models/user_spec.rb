@@ -15,6 +15,7 @@ describe User do
   it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
   it { should respond_to(:admin) }
+  it { should respond_to(:missions) }
 
   it { should be_valid }
   it { should_not be_admin }
@@ -70,5 +71,27 @@ describe User do
   describe "remember token" do
     before { @user.save }
     its(:remember_token) { should_not be_blank }
+  end
+  describe "mission associations" do
+
+    before { @user.save }
+    let!(:older_mission) do
+      FactoryGirl.create(:mission, user: @user, created_at: 1.day.ago)
+    end
+    let!(:newer_mission) do
+      FactoryGirl.create(:mission, user: @user, created_at: 1.hour.ago)
+    end
+
+    it "should have the right missions in the right order" do
+      expect(@user.missions.to_a).to eq [newer_mission, older_mission]
+    end
+    it "should destroy associated missions" do
+      missions = @user.missions.to_a
+      @user.destroy
+      expect(missions).not_to be_empty
+      missions.each do |mission|
+        expect(mission.where(id: mission.id)).to be_empty
+      end
+    end
   end
 end
