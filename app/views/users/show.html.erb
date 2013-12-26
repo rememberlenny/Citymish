@@ -1,11 +1,19 @@
 <% provide(:title, @user.name) %>
 
 <div class="row">
-  <div class="large-4 column">
-    <%= gravatar_for @user %>
-    <h1><%= @user.name %></h1>
+  <div class="large-4 column user-column">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+    <section>
+      <%= render 'shared/stats' %>
+    </section>
   </div>
   <div class="large-8 column">
+    <%= render 'follow_form' if signed_in? %>
     <% if @user.missions.any? %>
       <h3>Missions (<%= @user.missions.count %>)</h3>
       <ol class="missions">

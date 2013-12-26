@@ -3,6 +3,7 @@ namespace :db do
   task populate: :environment do
     make_users
     make_missions
+    make_relationships
   end
 end
 
@@ -27,8 +28,15 @@ def make_missions
   users = User.all(limit: 6)
   50.times do
     content = Faker::Lorem.sentence(5)
-    description = Faker::Lorem.sentence(10)
-    name = Faker::Lorem.sentence(1)
-    users.each { |user| user.missions.create!(content: content, description: description, name: name) }
+    users.each { |user| user.missions.create!(content: content) }
   end
+end
+
+def make_relationships
+  users = User.all
+  user  = users.first
+  followed_users = users[2..50]
+  followers      = users[3..40]
+  followed_users.each { |followed| user.follow!(followed) }
+  followers.each      { |follower| follower.follow!(user) }
 end

@@ -15,6 +15,8 @@ describe User do
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
   it { should respond_to(:authenticate) }
+  it { should respond_to(:relationships) }
+  it { should respond_to(:followed_users) }
 
   it { should be_valid }
 
