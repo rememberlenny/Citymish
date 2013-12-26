@@ -1,0 +1,18 @@
+<div class="row mission-row">
+  <% if local_assigns.has_key? :titleName %>
+    <h3><a href=""><%= titleName %></a></h3>
+  <% end %>
+  <% if local_assigns.has_key? :displayObject %>
+    <a href="">Change <%= displayObject %></a>
+  <% end %>
+  <a href="" class="link-crumbs">See All</a>
+  <ul class="no-bullet large-block-grid-4">
+
+    <!-- Run the mission model x4 -->
+    <%= render 'layouts/missions/missionListItem.html' %>
+    <%= render 'layouts/missions/missionListItem.html' %>
+    <%= render 'layouts/missions/missionListItem.html' %>
+    <%= render 'layouts/missions/missionListItem.html' %>
+
+  </ul>
+</div>

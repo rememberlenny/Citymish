@@ -1,0 +1,17 @@
+<% provide(:title, 'All users') %>
+
+<div class="row">
+
+  <h1>All users</h1>
+
+  <%= will_paginate %>
+
+  <ul class="users no-bullet">
+    <% @users.each do |user| %>
+      <%= render user %>
+    <% end %>
+  </ul>
+
+  <%= will_paginate %>
+
+</div>

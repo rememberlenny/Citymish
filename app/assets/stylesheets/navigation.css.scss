@@ -1,0 +1,103 @@
+$primary-color: rgb(89, 123, 199);
+$secondary-color: rgb(24, 231, 189);
+$link-grey: #999;
+$top-nav-padding: 11px;
+$border-color: rgb(208, 213, 203);
+
+.alert-container{
+  margin-top:1em;
+}
+
+@media only screen and (min-width: 40.063em){
+
+  .top-bar-section > ul > .divider{
+    border-color: $border-color;
+  }
+  .top-bar{
+    .top-bar-section li a:not(.button) {
+      font-size: 12px;
+    }
+    border-bottom: 1px solid $border-color;
+    a{
+      &:hover{
+        background: white;
+        color: #333;
+      }
+    }
+    h1{
+      &:hover{
+        opacity: .7;
+      }
+    }
+    .has-form{
+      input{
+        width: 207px;
+        border-radius: 15px;
+        font-size: 11px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        top: 18px;
+        line-height: 11px;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        background: rgb(255, 255, 255);
+        padding-left: 28px;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
+        &:focus{
+          border-color: $primary-color;
+        }
+      }
+    }
+  }
+  .top-bar-section{
+    #what_is_citymission_link{
+      font-weight: bold;
+      width: 105px;
+      display: inline-block;
+      padding-top: $top-nav-padding;
+      line-height: 17px;
+      float: left;
+      color: #222;
+      margin-left: 8px;
+    }
+    li{
+      a:not(.button){
+        padding: $top-nav-padding 14px;
+        font-size: .9em;
+        line-height: 17px;
+        span{
+          color: $link-grey;
+        }
+      }
+      &:hover{
+        a:not(.button){
+          strong, span{
+            opacity: 1;
+            color: #222;
+          }
+        }
+
+      }
+    }
+    li.no-span{
+      padding-top: 10px;
+      span{
+        color: $link-grey;
+        font-size: 12px;
+      }
+      &.login{
+        span{
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+.top-bar-section{
+  strong{
+    color: $primary-color;
+    display: block;
+  }
+}

@@ -1,0 +1,73 @@
+<div class="contain-to-grid">
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to root_path do %>
+          <%= image_tag 'logo.png' %>
+        <% end %></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <%= link_to 'What is Citymission?', hello_path, :id => "what_is_citymission_link" %>
+
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li class="divider"></li>
+        <li class=""><%= link_to discover_path do %>
+          <strong>Discover</strong> <span>great projects</span>
+        <% end %></li>
+        <li class="divider"></li>
+        <li class=""><%= link_to do %>
+          <strong>Start</strong> <span>a project</span>
+        <% end %></li>
+        <li class="divider"></li>
+        <li class="has-form">
+          <div class="row collapse">
+            <div class="large-12 small-12 columns">
+              <form>
+                <input type="text" id="right-label" placeholder="Search projects">
+              </form>
+            </div>
+          </div>
+        </li>
+        <li class="no-span divider"></li>
+        <li class="no-span"><%= link_to help_path do %>
+          <span>Help</span>
+        <% end %></li>
+        <% if signed_in? %>
+          <li class="has-dropdown no-span login">
+            <%= link_to user_path(current_user) do %>
+              <span>Profile</span>
+            <% end %>
+            <ul class="dropdown">
+              <li>
+                <%= link_to edit_user_path(current_user) do %>
+                  Edit Profile
+                <% end %>
+              </li>
+            </ul>
+          </li>
+          <li class="no-span login">
+            <%= link_to signout_path, method: "delete" do %>
+              <span>Logout</span>
+            <% end %>
+          </li>
+        <% else %>
+          <li class="no-span login">
+            <%= link_to signup_path do %>
+              <span>Sign up</span>
+            <% end %>
+          </li>
+          <li class="no-span login">
+            <%= link_to signin_path do %>
+              <span>Sign in</span>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+  </nav>
+</div>

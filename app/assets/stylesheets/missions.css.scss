@@ -1,0 +1,43 @@
+// Place all the styles related to the missions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.mission-list-item{
+  .inline-list{
+    margin-left: 0em;
+    li{
+      strong{
+        font-size: .8rem;
+      }
+      small{
+        text-transform: uppercase;
+      }
+      &:first-child{
+        margin-left: 0em;
+      }
+    }
+  }
+}
+.highlight{
+  .image-wrapper{
+    max-height: 250px;
+    overflow: hidden;
+  }
+  .side-nav{
+    li{
+        margin-bottom: 0em;
+        border-left: 1px solid #333;
+        a{
+          padding: .45em .6em;
+          color: #333;
+        }
+        &.active{
+          border-left: 5px solid #43ac6a;
+          a{
+            margin-left: -4px;
+            text-decoration: underline;
+            color: #43ac6a;
+          }
+        }
+    }
+  }
+}
