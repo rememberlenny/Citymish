@@ -21,6 +21,7 @@ Citymish::Application.routes.draw do
   get '/missions', to: 'missions#index'
   get '/discover', to: 'missions#index'
 
+  get '/start', to: 'pages#new_project'
   get '/hello', to: 'pages#about'
   get '/help', to: 'pages#help'
 
