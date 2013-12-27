@@ -105,10 +105,21 @@ describe User do
       let(:unfollowed_post) do
         FactoryGirl.create(:mission, user: FactoryGirl.create(:user))
       end
+      let(:followed_user) { FactoryGirl.create(:user) }
+
+      before do
+        @user.follow!(followed_user)
+        3.times { followed_user.missions.create!(content: "Lorem ipsum") }
+      end
 
       its(:feed) { should include(newer_mission) }
       its(:feed) { should include(older_mission) }
       its(:feed) { should_not include(unfollowed_post) }
+      its(:feed) do
+        followed_user.missions.each do |mission|
+          should include(mission)
+        end
+      end
     end
   end
   describe "following" do
