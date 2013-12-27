@@ -8,7 +8,7 @@ Citymish::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :missions, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]
-  resources :projects, only: [:new, :create, :destroy]
+  resources :projects#, only: [:new, :create, :destroy]
 
   root 'pages#index'
 
@@ -22,7 +22,7 @@ Citymish::Application.routes.draw do
   get '/missions', to: 'missions#index'
   get '/discover', to: 'missions#index'
 
-  get '/start', to: 'pages#new_project'
+  get '/start', to: 'projects#new'
   get '/missions/guidelines', to: 'pages#project_guidelines'
   get '/hello', to: 'pages#about'
   get '/help', to: 'pages#help'

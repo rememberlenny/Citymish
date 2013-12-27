@@ -60,6 +60,20 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def prjfollowers
+    @title = "Followers"
+    @user = User.find(params[:id])
+    @users = @user.prjfollowers.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
+  def prjfollowing
+    @title = "Following"
+    @user = User.find(params[:id])
+    @users = @user.prjfollowed_users.paginate(page: params[:page])
+    render 'show_follow'
+  end
+
   private
 
     def user_params

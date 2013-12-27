@@ -1,0 +1,25 @@
+<div class="panel user-profile">
+  <section class="">
+    <%= render 'shared/project_user_info' %>
+  </section>
+
+  <section class=" border-top border">
+    <span>
+      <% if @user.projects.count == 1 %>
+        First created
+      <% else %>
+        <%= pluralize(@user.projects.count, "created") %>
+      <% end %>
+    </span>
+    ·
+    <span>
+      <%= pluralize(@user.projects.count, "supported") %>
+    </span>
+  </section>
+
+  <% if @user.website  %>
+    <section class="border">
+      <strong>Website: </strong><a href="http://<%= @user.website %>"><%= @user.website %></a>
+    </section>
+  <% end %>
+</div>

@@ -1,0 +1,38 @@
+<% provide(:sectionTitle, @project.projectTitle ) %>
+<% provide(:sectionBlurb, @project.shortBlurb ) %>
+
+<%= render 'projects/progress_header_message' %>
+
+<div class="grey-back">
+  <div class="row">
+    <dl class="sub-nav">
+      <dd class="active"><a href="#">Home</a></dd>
+      <dd><a href="#">Active</a></dd>
+      <dd><a href="#">Pending</a></dd>
+      <dd><a href="#">Suspended</a></dd>
+    </dl>
+  </div>
+  <div class="row white-back">
+    <div class="large-8 column">
+      <img src="<%= @project.projectImage %>">
+      render sharing / short url
+
+      <p>
+        <%= @project.projectDescription %>
+      </p>
+      <h3>Risks and challenges</h3>
+      <p>
+        <%= @project.risksChallenges %>
+      </p>
+    </div>
+    <div class="large-4 column">
+
+      <%= render 'projects/author_box' %>
+    </div>
+  </div>
+</div>
+<p></p>
+<p><%= @project.projectLocation %></p>
+<p><%= @project.collectionDuration %></p>
+<p><%= @project.participationGoal %></p>
+<p><%= @project.projectVideo %></p>

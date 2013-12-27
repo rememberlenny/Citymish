@@ -1,6 +1,66 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'colors';
+
+.white-back{
+  background: $white-background;
+}
+
+.user-profile{
+  .photo-box{
+    vertical-align: top;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    display: inline-block;
+  }
+  .text-box{
+    p{
+      margin-bottom: .75em;
+    }
+    display: inline-block;
+    height:65px;
+    a{
+      color: $primary-color;
+    }
+  }
+  h1{
+    font-size: 2em;
+  }
+}
+
+.panel.user-profile{
+  section.border-top{
+    border-top: 1px dotted black;
+    padding-top:.5em;
+  }
+  section.border{
+    padding-top:.5em;
+    padding-bottom:.5em;
+    border-bottom: 1px dotted black;
+  }
+}
+
+.grey-back{
+  .sub-nav{
+    margin-left: 5%;
+    .active{
+      border-bottom: 4px solid #b0f0fc;
+      a, a:hover{
+        font-weight: 600;
+        color: #333;
+        background: none;
+      }
+    }
+  }
+  .sub-nav, dd{
+    margin-bottom: 0em;
+  }
+}
+.row.white-back{
+  border-radius: 10px;
+  padding: 30px 15px;
+}
 
 .seperator-right{
   border-right: 1px solid rgb(207, 207, 207);
@@ -24,9 +84,11 @@
   background: rgb(238, 242, 234);
   border-radius: 10px;
 }
-
+.grey-back{
+  background: $grey-background;
+}
 .light-bg{
-  background: rgb(245, 245, 245);
+  background: $grey-background;
   padding-top: 2em;
   padding-bottom: 2em;
 }

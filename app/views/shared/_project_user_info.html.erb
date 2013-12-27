@@ -1,0 +1,20 @@
+
+  <div class="photo-box">
+    <%= link_to gravatar_for(@user, size: 100), @user %>
+  </div>
+  <div class="text-box">
+      <strong>Project by</strong>
+    <h1>
+      <small>
+        <strong>
+          <%= link_to @user.name, @user %>
+        </strong>
+      </small>
+    </h1>
+    <% if @user.location %>
+    <p>
+      <%= @user.location %>
+    </p>
+    <% end %>
+    <%= mail_to @user.email, 'Contact Me' %>
+  </div>

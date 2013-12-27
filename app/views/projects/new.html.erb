@@ -1,3 +1,6 @@
+<%  provide(:sectionTitle, "Meet your new project.") %>
+<%  provide(:sectionBlurb, "Start by giving it a name, a pic, and other important details.") %>
+
 <%= render 'projects/progress_signup' %>
 
 <%= render 'projects/progress_header_message' %>
@@ -5,7 +8,6 @@
 <div class="row">
 
   <div class="column large-8 seperator-right">
-
 
     <%= form_for @project do |f| %>
 
