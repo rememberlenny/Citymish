@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Citymish::Application.config.secret_key_base = '19255b332cd47d5291f0454e888497a03626fd6d858def49b2fe0121c967c04c855366a8b883b4fb842790e9032ac3e2be1c1c301bcc539f46742b9523e45eb8'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+
+Citymish::Application.config.secret_key_base = secure_token
