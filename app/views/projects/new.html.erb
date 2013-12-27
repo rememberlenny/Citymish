@@ -1,0 +1,103 @@
+<%= render 'projects/progress_signup' %>
+
+<%= render 'projects/progress_header_message' %>
+
+<div class="row">
+
+  <div class="column large-8 seperator-right">
+
+
+    <%= form_for @project do |f| %>
+
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:projectImage, "Project image") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.url_field :projectImage %>
+        </div>
+      </div>
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:projectTitle, "Project title") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.text_field :projectTitle %>
+        </div>
+      </div>
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:category, "Category") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.text_field :category %>
+        </div>
+      </div>
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:shortBlurb, "Short blurb") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.text_area :shortBlurb %>
+        </div>
+      </div>
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:projectLocation, "Project location") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.text_field :projectLocation %>
+        </div>
+      </div>
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:collectionDuration, "Duration") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.text_field :collectionDuration %>
+        </div>
+      </div>
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:participationGoal, "Participation goal") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.text_field :participationGoal %>
+        </div>
+      </div>
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:projectVideo, "Project video") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.url_field :projectVideo %>
+        </div>
+      </div>
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:projectDescription, "Project description") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.text_area :projectDescription %>
+        </div>
+      </div>
+      <div class="row field">
+        <div class="large-4 column">
+          <%= label_tag(:risksChallenges, "Risks and Challenges") %>
+        </div>
+        <div class="large-8 column">
+          <%= f.text_area :risksChallenges %>
+        </div>
+      </div>
+
+      <%= f.submit "Post", class: "button large" %>
+    <% end %>
+
+  </div>
+
+
+  <div class="column large-4">
+
+  </div>
+
+</div>

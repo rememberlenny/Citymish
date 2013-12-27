@@ -1,0 +1,47 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.seperator-right{
+  border-right: 1px solid rgb(207, 207, 207);
+  padding-right: 3em;
+  margin-top: 2em;
+  margin-bottom: 1em;
+}
+
+.field.row.row{
+  margin-bottom: 2em;
+  padding: 20px 10px;
+  label{
+    font-weight: 600;
+  }
+  input{
+    margin: 0;
+  }
+}
+
+.row.field{
+  background: rgb(238, 242, 234);
+  border-radius: 10px;
+}
+
+.light-bg{
+  background: rgb(245, 245, 245);
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+.progress-signup{
+  ul.inline-list{
+    text-align: center;
+    li{
+      background: rgb(77, 77, 77);
+      margin-left: 0em;
+      border: 1px solid rgb(55, 55, 55)
+    }
+  }
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  li{
+    padding: 10px;
+  }
+}

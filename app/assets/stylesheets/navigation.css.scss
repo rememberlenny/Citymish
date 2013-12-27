@@ -6,7 +6,9 @@ $border-color: rgb(208, 213, 203);
 
 
 @media only screen and (min-width: 40.063em){
-
+  .contain-to-grid{
+    border-bottom: 1px solid $border-color;
+  }
   .top-bar-section > ul > .divider{
     border-color: $border-color;
   }
@@ -14,7 +16,6 @@ $border-color: rgb(208, 213, 203);
     .top-bar-section li a:not(.button) {
       font-size: 12px;
     }
-    border-bottom: 1px solid $border-color;
     a{
       &:hover{
         background: white;

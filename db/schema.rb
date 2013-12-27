@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131226214059) do
+ActiveRecord::Schema.define(version: 20131227170453) do
 
   create_table "missions", force: true do |t|
     t.string   "name"
@@ -23,6 +23,21 @@ ActiveRecord::Schema.define(version: 20131226214059) do
   end
 
   add_index "missions", ["user_id", "created_at"], name: "index_missions_on_user_id_and_created_at"
+
+  create_table "projects", force: true do |t|
+    t.string   "projectImage"
+    t.string   "projectTitle"
+    t.string   "category"
+    t.string   "shortBlurb"
+    t.string   "projectLocation"
+    t.integer  "collectionDuration"
+    t.integer  "participationGoal"
+    t.string   "projectVideo"
+    t.text     "projectDescription"
+    t.text     "risksChallenges"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "relationships", force: true do |t|
     t.integer  "follower_id"
