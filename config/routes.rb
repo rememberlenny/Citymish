@@ -20,7 +20,7 @@ Citymish::Application.routes.draw do
   match '/signup',  to: 'users#new',            via: 'get'
 
   get '/missions', to: 'missions#index'
-  get '/discover', to: 'missions#index'
+  get '/discover', to: 'pages#new_project'
 
   get '/start', to: 'projects#new'
   get '/missions/guidelines', to: 'pages#project_guidelines'
