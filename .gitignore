@@ -20,3 +20,5 @@ doc/
 .secret
 
 .envfiles
+
+config/local_env.yml

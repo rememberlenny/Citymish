@@ -2,6 +2,62 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'colors';
+.bitly-copy{
+
+  .columns{
+    background: rgba(157, 188, 222, 0.3);
+  }
+  .row, .columns, .column{
+    width: auto;
+  }
+  .nopad{
+    padding-right:0em;
+    margin-right: 0.9375rem;
+    float:right;
+  }
+  .button{
+
+    border:1px solid rgb(204, 204, 204);
+    margin-bottom: 0em;
+    background: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .email{
+    margin-left: 0.9375rem;
+  }
+  .share,.email{
+    opacity: .3;
+    float: right;
+    background: rgba(157, 188, 222, 0.3);
+  }
+  .copy-link{
+    a{
+      border-right: none;
+    }
+  }
+  .button, .copy-link a{
+
+    z-index: 2;
+    text-align: center;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 0.875rem;
+    height: 2.3125rem;
+    line-height: 2.125rem;
+    color: $primary-color;
+    font-weight: 600 !important;
+    &:hover{
+      background: none;
+      opacity: .9;
+    }
+  }
+  &:hover{
+    .share,.email{
+      opacity: .9
+    }
+  }
+}
 
 .project-cta{
 

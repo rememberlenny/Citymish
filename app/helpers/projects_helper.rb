@@ -13,9 +13,10 @@ module ProjectsHelper
 
 
   def bitly_shorten
+    current_project_url = request.original_url
     Bitly.use_api_version_3
-    bitly = Bitly.new('ENV["bitlylogin"]','ENV["bitlyapikey"]' )
-    bitly_shortened_url = bitly.shorten('request.original_url').short_url
+    bitly = Bitly.new( ENV["bitlylogin"], ENV["bitlyapikey"] )
+    bitly_shortened_url = bitly.shorten(current_project_url).short_url
     return bitly_shortened_url
   end
 

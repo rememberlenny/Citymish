@@ -17,7 +17,7 @@
       <img src="<%= @project.projectImage %>">
       render sharing / short url
 
-      <%= bitly_shorten %>
+      <%= render 'projects/bitly_copy_link' %>
 
       <p>
         <%= @project.projectDescription %>
