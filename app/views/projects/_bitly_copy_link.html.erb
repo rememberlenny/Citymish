@@ -5,12 +5,16 @@
     <div class="column nopad">
       <div class="row collapse">
         <div class="small-9 columns copy-link">
-          <%= link_to bitly_shorten, bitly_shorten, :class=>"button" %>
+          <%= link_to bitly_shorten, bitly_shorten, :class=>"button shorten-link", :id=>'shorten-link' %>
         </div>
         <div class="small-3 columns">
-          <a href="#" class="button postfix">Copy</a>
+          <button href="#" class="button postfix" button id="my-button" data-clipboard-target="shorten-link">Copy</button>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<script>
+  var clip = new ZeroClipboard( $("button#my-button") );
+</script>
