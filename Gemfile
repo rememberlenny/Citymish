@@ -33,7 +33,6 @@ gem 'faker', '1.1.2'
 gem 'will_paginate', '3.0.4'
 gem 'foundation-will_paginate'
 gem 'bitly'
-gem 'zeroclipboard-rails'
 
 # Registration
 gem 'omniauth'
