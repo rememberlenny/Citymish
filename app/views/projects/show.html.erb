@@ -27,12 +27,16 @@
     </div>
     <div class="large-4 column">
 
+      <%= render 'projects/current_standing' %>
+
+      <%= render 'projects/cta_project' %>
+
       <%= render 'projects/author_box' %>
     </div>
+
+    <p><%= @project.projectLocation %></p>
+    <p><%= @project.projectVideo %></p>
+
   </div>
+
 </div>
-<p></p>
-<p><%= @project.projectLocation %></p>
-<p><%= @project.collectionDuration %></p>
-<p><%= @project.participationGoal %></p>
-<p><%= @project.projectVideo %></p>

@@ -3,10 +3,29 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'colors';
 
+.project-cta{
+
+  .button.large{
+    width: 100%;
+  }
+}
+.days-associated{
+  h5{
+    font-size: 4em;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: .2em;
+    margin-bottom: 0em;
+  }
+  strong{
+  }
+  margin: 1.5em;
+  opacity: .94;
+}
+
 .white-back{
   background: $white-background;
 }
-
 .user-profile{
   .photo-box{
     vertical-align: top;
@@ -42,6 +61,7 @@
 }
 
 .grey-back{
+  padding-bottom: 2em;
   .sub-nav{
     margin-left: 5%;
     .active{

@@ -19,4 +19,6 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:projectImage, :projectTitle, :category, :shortBlurb, :projectLocation, :collectionDuration, :participationGoal, :projectVideo, :projectDescription, :risksChallenges)
   end
 
+
+
 end
