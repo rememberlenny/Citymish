@@ -10,6 +10,13 @@ A platform for collecting and storing citizen generated open data.
 
 This project came to be out of a NYU GovLab Experiement.
 
+## In progress
+
+[http://www.citymish.com/]('http://www.citymish.com/')
+[http://www.citymish.com/discover ]('http://www.citymish.com/discover ')
+[http://www.citymish.com/projects/1]('http://www.citymish.com/projects/1')
+[https://github.com/rememberlenny/Citymish]('https://github.com/rememberlenny/Citymish')
+
 ## Contributors
 
 Pablo Aguero - [@RedPabs](https://twitter.com/RedPabs) - UX/UI Design Ninja
